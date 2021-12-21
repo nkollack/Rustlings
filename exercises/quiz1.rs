@@ -7,11 +7,15 @@
 // more than 40 at once, each apple only costs 1! Write a function that calculates
 // the price of an order of apples given the quantity bought. No hints this time!
 
-// I AM NOT DONE
-
 // Put your function here!
-// fn calculate_apple_price {
+fn calculate_apple_price(count:u32) -> u32 {
+    let mut cost = 2;
 
+    if count > 40 {
+        cost = 1;
+    }
+    count * cost
+}
 // Don't modify this function!
 #[test]
 fn verify_test() {
